@@ -1,0 +1,11 @@
+rmdir mkdirtest
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &
+dirtest.m &

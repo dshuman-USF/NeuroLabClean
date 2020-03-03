@@ -1,0 +1,36 @@
+daq2-clean (1.10.10) local; urgency=medium
+
+  * New version release
+
+ -- dshuman <dshuman@health.usf.edu>  Tue, 10 Nov 2015 13:11:30 -0500
+
+daq2-clean (1.10.9) local; urgency=medium
+
+  * New version release
+
+ -- dshuman <dshuman@health.usf.edu>  Mon, 24 Aug 2015 13:39:48 -0400
+
+daq2-clean (1.10.7) local; urgency=medium
+
+  * New version release
+
+ -- dshuman <dshuman@health.usf.edu>  Wed, 23 Jul 2014 11:31:23 -0400
+
+daq2-clean (1.10.3) UNRELEASED; urgency=low
+
+  * start next one
+
+ -- dale <dale@health.usf.edu>  Fri, 24 Jan 2014 15:18:39 -0500
+
+daq2-clean (1.10.2) local; urgency=low
+
+  [ dshuman ]
+  * First real release to local repository
+
+ -- dshuman <dshuman>  Tue, 21 Jan 2014 16:18:29 -0500
+
+daq2-clean (1.10.1) local; urgency=low
+
+  * Initial Release.
+
+ -- dshuman <dshuman>  Thu, 09 Jan 2014 15:41:27 -0500

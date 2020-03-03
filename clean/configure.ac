@@ -1,0 +1,14 @@
+AC_PREREQ([2.67])
+AC_INIT([daq2-clean],[1.10.11],[dshuman@usf.edu])
+AM_INIT_AUTOMAKE()
+AC_CONFIG_SRCDIR(daq2_split.c)
+AC_CONFIG_HEADERS([config.h])
+
+: ${CFLAGS=""}
+AC_PROG_CC
+AM_PROG_CC_C_O
+AC_HEADER_STDC
+
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

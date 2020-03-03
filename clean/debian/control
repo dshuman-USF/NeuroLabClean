@@ -1,0 +1,23 @@
+Source: daq2-clean
+Section: local
+Priority: optional
+Maintainer: dshuman <dshuman>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev,
+  libsigsegv2,
+  gawk,
+  perl-modules,
+  locales,
+  libc6-dev,
+  cdbs,
+  octave-pkg-dev (>= 1.0.1),
+  octave (>= 3.8.0),
+  octave-common (>= 3.8.0),
+  octave-general
+Standards-Version: 4.2.1
+Homepage: cisc3
+
+Package: daq2-clean
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: daq2 cleaning tools
+ daq2 cleaning tools

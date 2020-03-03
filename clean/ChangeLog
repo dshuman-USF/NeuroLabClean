@@ -1,0 +1,146 @@
+2020-02-17  dshuman@usf.edu
+
+	* lots of files: add in gpl header to make nice with github.
+	* Makefile.am: git targets.
+
+2017-10-26  dale@health.usf.edu
+
+	* debian/postinst.template: move old version to SOURCES/old dir.
+
+2017-07-17  dale@health.usf.edu
+
+	* do_clean_data2.m: workaround for bug in latest version of octave, 4.2.1.
+	* debian/control: remove reference to hardening-wrapper, it is provided by
+	other means.
+
+2015-11-10  dale@health.usf.edu
+
+	* make_chan.sh: add in empty chanlists 9 and 10 for an experiment that needed 9
+	separate chan lists (and add in 10 just because).
+	* clean_rec.sh: add in 9 & 10 list handling.
+	* configure.ac: rollup to 1.10.10
+
+2015-08-24  dale@health.usf.edu
+
+	* do_clean_data2.m: Invoke octave in command line mode.  Version 4.0 starts
+	up in GUI mode, which makes errors out for scripts with no GUI
+	requirements.
+	* debian/control: add in some octave dependencies
+
+2015-01-26  dale@health.usf.edu
+
+	* debian/postinst.template: add --allow-unauthenticated flag so source will
+	be downloaded.
+
+2014-07-23  dale@health.usf.edu
+
+	* Daq2CleanUsersManual.odt:  LSegers updates to the manual.
+	* configure.ac: Bump up to 1.10.7
+
+2014-04-01  dale@health.usf.edu
+
+	* debian/postinst.template: fix bug, should be .dsc, not _dsc
+	* Makefile.am: remove bldpkg target, releasepkg script does this now.
+	* configure.ac: bump to 1.10.6
+
+2014-03-28  dale@health.usf.edu
+
+	* do_clean_data2.m: Was sending wrong count to CleanData, only 1/2 the matrix 
+	was being cleaned.  fread returns # of items (shorts in this case), not bytes.
+	* configure.ac: Bump up to 1.10.5
+
+2014-03-12  dale@health.usf.edu
+
+	* do_clean_data2.m: fix dir create race condition.  Don't test, then try to
+	make, try to make, then test.  If the dir is there, we're happy no matter
+	which instance made it.
+	* do_noclean_data.sh: Same race condtion, same fix.
+	* do_clean_data2.m: Add check to make sure in and out files are same size.
+	The 1.10.3 fix should ensure this will not happen, but it can't hurt to
+	check.
+	* configure.ac: bump to 1.10.4
+
+2014-03-11  dale@health.usf.edu
+
+	* do_clean_data2.m: Octave 3.8 changes how fread works.  If you ask for X
+	bytes but only get X-n bytes back, the length of the vector you read into
+	is X bytes.  This breaks CleanData.m.  Now pass in the channels matrix with
+	explicit size for # of rows.
+	* configure.ac: bump to 1.10.3
+
+2014-01-21  dale@health.usf.edu
+
+	* Makefile.am: Updates to build debian packages.
+	* configure.ac: version 1.10.2.
+
+2013-11-26  dale@health.usf.edu
+
+	* make_chan.sh: addin chans 120-123 to noclean list
+
+2013-10-25  dale@health.usf.edu
+
+	* Makefile.am: add daq_to_bin.
+	* configure.ac: bump up to 1.10.0
+
+2013-10-24  dale@health.usf.edu
+
+	* daq_to_bin.c: Create.  The split dirs are not always present, so go
+	straight to the source.
+	* chans_to_bin.c: Fix bug where SelList not initialized to select all chans.
+
+2013-09-12  dale@health.usf.edu
+
+	* make_chan.sh: Add in support for new chan organization on second daq
+	card.  Since we want to make chan lists for both older and newer chan
+	assignments, this now prompts for input.
+
+2013-08-09  dale@health.usf.edu
+
+	* chans_to_bin.c: create this to combine a set of chan files into a single
+	binary image that can be imported into the CED Spike2 program.
+
+2013-03-01  dale@health.usf.edu
+
+	* make_chan.sh: uncomment Neptune chans.
+
+2012-12-20  dale@health.usf.edu
+
+	* Daq2CleanUsersManual.odt:   Correct spelling of make_lable.sh in short
+	form section.  This is for the version 1.7 package, already released, will
+	replace earlier copies.
+
+2012-12-13  dale@health.usf.edu
+
+	* clean_rec.sh: isolate tests for 2 params so shell does not complain.
+	* make_chan.sh: remove nerve chans from chanlist 6, dups of 57-60 and
+	should not be cleaned together.
+
+2012-10-22  dale@health.usf.edu
+
+	* daq2_unsplit.c: add to the packages for version 1.6
+
+2012-09-10  dale@health.usf.edu
+
+	* make_chan.sh: redo files and contents as requested.
+
+2012-05-31  dale@health.usf.edu
+
+	* clean_rec.sh: modify to accept optional param to handle old datamax chan
+	files.  This passes on down the chain so do_clean_data2.m does not expect a
+	_r_ in the raw chan filenames.
+	* do_clean_data.sh: ditto
+	* make_chan.sh: Fix bug in how noclean list filename was created.
+	* Daq2CleanUsersManual.*:  Update to reflect --no_r param change.
+
+2012-05-08  dale@health.usf.edu
+
+	* daq2_split.c: Spelling error.
+
+2012-03-22  dale  <dale@kali>
+
+	* Start the ChangeLog file
+
+
+
+
+
